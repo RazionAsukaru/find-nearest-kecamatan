@@ -6,6 +6,19 @@
 */
 {
   "files": [],
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "lib": ["es2017"],
+    "strict": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "outDir": "out",
+    "esModuleInterop": true
+  },
   "references": [
     {
       "path": "./src/tsconfig.app.json"

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import output from './../../assets/files/output.json';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,15 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  kecamatan = [];
 
-  ngOnInit(): void { }
+  constructor(private router: Router) {
+    this.kecamatan = [...output];
+    console.log(this.kecamatan);
+    
+  }
+
+  ngOnInit(): void {
+  }
 
 }

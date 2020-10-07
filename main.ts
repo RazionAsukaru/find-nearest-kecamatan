@@ -35,6 +35,7 @@ function createWindow(): BrowserWindow {
     win.loadURL('http://localhost:4200');
 
   } else {
+    win.webContents.openDevTools();
     win.loadURL(url.format({
       pathname: path.join(__dirname, 'dist/index.html'),
       protocol: 'file:',
@@ -81,3 +82,15 @@ try {
   // Catch Error
   // throw e;
 }
+
+const xlsxj = require("xlsx-to-json");
+xlsxj({
+  input: "./src/assets/files/test.xlsx", 
+  output: "./src/assets/files/output.json"
+}, function(err, result) {
+  if(err) {
+    console.error(err);
+  }else {
+    console.log(result);
+  }
+});
